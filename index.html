@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Auto Text Typing Script</title>
+        <style>
+            body {
+                background-color:lighgrey;
+                color:grey;
+                padding:5px;
+            }
+        </style>
+    </head>
+    <body id="bod">
+
+        <script type="text/javascript">
+            var br = "<br><br>";
+
+            var story = "Hello, today I will tell you a story. It is a true story, because of the fact that nobody can prove it false.Z3000 years ago , the sky was black. The sun still shone and the stars too. But the sky was black.ZAt that time a man, named John Brown lived. He was fasicnated with the sky. He wished that it was his favorite color(Blue).ZSo, John Brown gathered blue flowers, blueberries and blue beetles. He mixed them in to a huge pot, and they became a blue paint.ZJohn Brown gathered his friends and family, and together they began to paint the sky.ZHow could they reach the sky you ask? John Brown built huge towers, and set these on top of wheels or boats. They had huge brushes made of straw or wheat.ZWhenever anybody needed to wash their paintbrush, they dipped it into the sea. That is why the sea is so blue and salty today(They used salt to preserve the paint).ZWhen John Brown was finished with the sky(over 1,500 years later) he had grown sick of the color blue. He sailed across the ocean to what is now, Maine USA, where the skies are always cloudy and the water is clear and salt-free.ZJohn Brown buried a scroll in the woods before he died. I found it the other day when I was collecting firewood.ZNow you know why the sky is blue! Give a like if you cant prove this theory wrong!";
+            var body = document.getElementById("bod");
+            setInterval(add,30);
+            var i = 0;
+
+            function add(){
+                if(story[i] == "Z"){
+                    bod.innerHTML += br + "....";
+                    i++;
+                }
+
+                if(i < story.length){
+                    bod.innerHTML+=story[i];
+                    i++;
+                }
+            }
+        </script>
+    </body>
+</html>
